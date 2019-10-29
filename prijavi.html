@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="sr">
+    <head>
+        <title>Prijava pogrešno podeljene reči na slogove</title>
+        <meta charset="UTF-8"/>
+        <meta name="description" content="Aplikacija omogućava jednostavnu podelu pojedinačnih reči ili teksta na srpskom jeziku na slogove">
+        <meta name="keywords" content="slog, sloga, slogu, slogom, slogovi, slogova, slogovima, podela na slog, podela na slogove, granica sloga, stih, metar, versifikacija, silabička versifikacija, gramatika, fonetika, fonologija, podela reči na slogove, reči, tekst">
+        <meta name="author" content="Igor Javor">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link href="index.css" type="text/css" rel="stylesheet">
+        <script src="../slogovi.js" defer></script>
+        <link rel="canonical" href="http://www.podelinaslogove.com/prijavi.html" />
+
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-150096484-1"></script>
+        <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'UA-150096484-1');
+        </script>
+
+    </head>
+
+    <body>
+        <nav id="navigation">
+                <ul id="navlist">
+                    <a href="prijavicyr.html"><li id= "cyr">Ћир</li></a>
+                    <a href="prijavi.html"><li id="lat">Lat</li></a>
+                    <a id="home" href="index.html"> <li>Početna</li> </a>
+                    <a id="rules" href="rules.html"><li>Pravila podele</li></a>
+                    <a id="report" href="prijavi.html"><li style="font-size: 1.5em; background-color: rgba(87, 3, 3, 0.85); color: rgba(214, 151, 97, 1);">Prijavi pogrešnu podelu</li></a>
+                    <a id="about" href="about.html"><li>O projektu</li></a>
+                </ul>
+        </nav>
+        <div class="heading">
+            <h1 id="naslov" class="title">PRIJAVITE POGREŠNO PODELJENU REČ</h1>
+            <p class="description">Ovde možete prijaviti svaku pogrešno podeljenu reč. Posle unosa reči, klikom na dugme bićete automatski preusmereni na formu za slanje poruke serveru.</p>
+            <div class=input>
+                <textarea id="inputWrong" title="Pogrešno podeljena reč" autofocus placeholder="Unesite reč koja je pogrešno podeljena" onclick="this.focus();this.select()" onkeypress="addSpace(event);"></textarea>
+                <br>
+                <textarea id="inputRight" title="Ispravno podeljena reč" autofocus placeholder="Unesite ispravnu podelu reči odvajajući slogove" onclick="this.focus();this.select()" onkeypress="addSpace(event);"></textarea>
+                <br>
+                <a id="report1" href="#" onclick="sendEmail();" target="_blank"> <input id="reportWord" type="button" value="Prijavi pogrešno podeljenu reč"> </a>
+                <br>
+                <div id="thankYouMsg">Hvala Vam što učestvujete u poboljšanju funkcionalnosti veb-sajta!</div>
+            </div>
+
+        </div>
+        <br>
+        <footer>
+            <div class="fcontainer">
+                <p id="contact">Kontaktirajte s nama: <a href="mailto:contact@podelinaslogove.com" target="_blank">contact@podelinaslogove.com</a></p>
+                <p id="bug">Prijavite bag: <a href="mailto:bugs@podelinaslogove.com" target="_blank">bugs@podelinaslogove.com</a></p>
+                <p id="copy">Copyright &copy; 2019 Igor Javor | All Rights Reserved.</p>
+            </div>
+
+        </footer>
+    </body>
+</html>

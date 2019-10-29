@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="sr">
+    <head>
+        <title>Informacije o projektu</title>
+        <meta charset="UTF-8"/>
+        <meta name="description" content="Aplikacija omogućava jednostavnu podelu pojedinačnih reči ili teksta na srpskom jeziku na slogove">
+        <meta name="keywords" content="slog, sloga, slogu, slogom, slogovi, slogova, slogovima, podela na slog, podela na slogove, granica sloga, stih, metar, versifikacija, silabička versifikacija, gramatika, fonetika, fonologija, podela reči na slogove, reči, tekst">
+        <meta name="author" content="Igor Javor">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link href="index.css" type="text/css" rel="stylesheet">
+        <script src="../slogovi.js" defer></script>
+        <link rel="canonical" href="http://www.podelinaslogove.com/about.html" />
+
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-150096484-1"></script>
+        <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'UA-150096484-1');
+        </script>
+
+    </head>
+
+    <body>
+        <nav id="navigation">
+                <ul id="navlist">
+                    <a href="aboutcyr.html"><li id= "cyr">Ћир</li></a>
+                    <a href="about.html"><li id="lat">Lat</li></a>
+                    <a id="home" href="index.html"> <li>Početna</li> </a>
+                    <a id="rules" href="rules.html"><li>Pravila podele</li></a>
+                    <a id="report" href="prijavi.html"><li >Prijavi pogrešnu podelu</li></a>
+                    <a id="about" href="about.html"><li style="font-size: 1.5em; background-color: rgba(87, 3, 3, 0.85); color: rgba(214, 151, 97, 1);">O projektu</li></a>
+                </ul>
+        </nav>
+        <div class="heading">
+            <h1 id="naslov" class="title">INFORMACIJE O PROJEKTU</h1>
+            <p class="description" id="aboutProject">Sajt podelinaslogove.com nastao je prevashodno kao demonstracioni ogled, sačinjen u svrhu ličnog usavršavanja autora u <i>frontend</i> i <i>backend</i> razvojnim tehnologijama ("čistom" HTML, CSS i JS kodu). Pošavši od ideje o rešavanju "test zadatka", u vidu JavaScript programa koji bi ispravno delio reči na slogove u srpskom jeziku, nakon razvoja i inicijalnog testiranja koda, rešili smo da projekat podignemo na sledeći nivo, implementirajući osnovni program za podelu slogova u okviru lokalnog veb-sajta, uobličenog u skladu sa funkcijama aplikacije i osnovnim potrebama potencijalnih korisnika. Posle dodatnog testiranja i ispravljanja uočenih problema u prikazivanju i radu veb-sajta, a posebno aplikacije za podelu reči na slogove, odlučili smo da razvijenu tehnologiju načinimo dostupnom široj javnosti na korišćenje, putem registracije domena i objavljivanja veb-sajta na internetu. Na taj način, prvobitna ideja da aplikacija za podelu reči na slogove posluži kao odgovarajući "test zadatak" iz programiranja, prerasla je u ideju da veb-sajt podelinaslogove.com ostvari i svoju potencijalnu edukativnu funkciju - kao nekomercijalni jezički alat dostupan svim zainteresovanim korisnicima.</p>
+            <br>
+            <p class="description" id="aboutProject">Premda smo tokom razvoja ovog programskog alata težili da pokrijemo sve složene slučajeve razdvajanja reči na slogove, koje propisuju i beleže gramatike srpskog jezika, važno je istaći da aplikacija (još uvek) ne funkcioniše potpuno ispravno za celokupan leksički fond srpskog jezika, te se zbog toga ne može uzeti kao apsolutna referentna tačka za podelu <i>svih</i> reči u srpskom jeziku na slogove, iako trenutni procenat tačnosti podele prelazi 95%. Iz tog razloga, veb-aplikaciji je dodata funkcionalnost <i>prijave pogrešno podeljene reči</i>, odnosno <i>unosa i prosleđivanja ispravne podele</i>. Na taj način, implementirana je mogućnost dobijanja povratne informacije od korisnika, a sve sa ciljem postizanja potpune tačnosti podele svih reči na slogove. Zbog toga ohrabrujemo korisnike da prijave svaki slučaj pogrešno podeljene reči: ili putem automatskog formulara za slanje elektronske pošte na sajtu ili direktnim slanjem na adresu <u>report@podelinaslogove.com</u> (ukoliko Vam u pretraživaču nije podešen podrazumevani čitač elektronske pošte).</p>
+            <br>
+            <p class="description" id="aboutProject">Osim potencijalno izostavljenih slučajeva i izuzetaka od osnovnih pravila podele reči na slogove, koje bi ovakav vid prijavljivanja u perspektivi mogao obuhvatiti, potrebno je naglasiti da su se u razvoju aplikacije pojavila i izvesna ograničenja po pitanju razdvajanja reči na slogove, koja se nisu mogla prevazići primenom formalnih gramatičkih pravila, već su zahtevala obrazovanje svojevrsnih baza podataka reči u kojima dolazi do odstupanja od ovih pravila, a koje programski alat sam po sebi nije u stanju da prepozna. Zbog svoje složenosti i obima, za sada nismo bili u stanju da obrazujemo ovakve baze, pa se iz tog razloga i preciznost podele izvesnog broja reči na slogove delom umanjila. Jedan takav primer predstavlja poslednje pravilo podele reči na slogove, prema kome granica dolazi ispred grupe od dva sonanta u kojima je drugi sonant glas <i>j</i> iz grupe <i>je</i> koje u rečima ijekavskog izgovora odgovara ekavskom <i>e</i>. Da bi program bio u stanju da razlikuje reči u kojima je glas <i>j</i> poreklom iz ijekavskog <i>je</i> (npr. <i>čo-vjek</i>) od reči u kojima to nije slučaj (pri čemu granica sloga dolazi između sonanata, npr. in-jek-ci-ja) bilo bi potrebno formirati bazu svih ijekavskih oblika reči, na osnovu koje bi program mogao "odlučiti" koje će pravilo primenjivati. U nedostatku ovakve baze, nametnulo se neizbežno ograničenje nemogućnosti ispravnog razdvajanja ijekavskih oblika. Drugi primer tiče se granice sloga u rečima u kojima slogotvorno <i>r</i> dolazi ispred <i>o</i> koje je postalo od <i>l</i> alternacijom L:O, gde granica sloga dolazi između sonanta i samoglasnika (npr. <i>gr-o-ce</i>). Da bi program razlikovao ove reči od reči u kojima u grupi <i>ro</i> samoglasnik <i>o</i> nije postao od <i>l</i> (pa se time i granica sloga pomera iza samoglasnika, npr. <i>gro-tlo</i>) još jednom bi bilo neophodno formirati bazu podataka sa svim slučajevima promene <i>l</i> u <i>o</i> u različitim padežnim oblicima. Zbog toga, veb-aplikacija za sada ne vrši ispravnu podelu ovakvih oblika reči. Treći primer predstavljaju izuzeci od pravila podele na slogove u srpskom jeziku koji se javljaju u slučaju pozajmljenica iz drugih jezika i čije bi ispravno rastavljanje na slogove takođe zahtevalo bazu podataka. Tako, na primer, iako u slučaju postojanja grupe dva sonanta unutar reči, pravilo propisuje da granica dolazi između njih (npr. <i>ruj-no</i>), u složenicama nemačkog porekla u kojima je prva komponenta leksema <i>ajn</i> (<i>ein</i>), granica sloga dolazi posle grupe sonanata (npr. <i>ajn-fort</i>, <i>ajn-špric</i>). Prema tome, u ovakvim i sličnim situacijama program će primenjujući osnovno pravilo izvršiti pogrešnu podelu (<i>aj-n-fort</i>, <i>aj-n-špric</i>). Četvrti primer, i ujedno ograničenje aplikacije, odnosi se na implementirani tip podele reči na slogove, takođe uslovljen odsustvom potpune baze podataka. Naime, premda se u gramatikama srpskog jezika daje prednost semantičkoj ili psihološkoj podeli reči na slogove (npr. <i>raz-lju-ti-ti</i>), zasnovanoj na razumevanju prefiksa kao posebnih delova reči, u nedostatku svojevrsne baze podataka svih oblika prefiksa u srpskom jeziku, morali smo se opredeliti za primenu fonetske ili glasovne podele reči na slogove (npr. <i>ra-zlju-ti-ti</i>), zasnovane na glasovnim osobinama sloga i njegovih konstituenata. U sva četiri primera, kojima se nesumnjivo mogu dodati i drugi specifični slučajevi, rešenje problema bi zahtevalo obrazovanje posebnih kontrolnih baza podataka, što je jedan od najvažnijih zadataka na putu ka postizanju apsolutne preciznosti rada aplikacije. Naposletku, primena ovakvih baza delom je sprovedena u dosadašnjem razvoju aplikacije u slučajevima kada je u latiničnoj grafiji bilo neophodno "naučiti" program da razlikuje reči u kojima se glasovi <i>dž</i>, <i>lj</i> i <i>nj</i> javljaju kao jedan (npr. <i>džem</i>, <i>ljubav</i>, <i>konj</i>), od onih u kojima predstavljaju grupe od dva glasa (npr. <i>nad-živeti</i>, <i>kon-junkcija</i>). U cilju postizanja ove razlike formirana je baza podataka leksičkih osnova u kojima se ovi glasovi izgovaraju kao grupe od dva glasa. Međutim, kao i u slučaju većine drugih predloženih baza, najveći nedostatak ovakve baze jeste njena nepotpunost, koja dalje može prouzrokovati nepreciznost u podeli izvesne nezastupljene reči na slogove. </p>
+            <br>
+            <p class="description" id="aboutProjectLast">Svi navedeni problemi i nedostaci sa kojima se suočavamo težeći da razvijemo apsolutno precizan alat za podelu reči na slogove, podsećaju nas na to da je jezik živa, složena i promenljiva tvorevina, ali čije osobine nije nemoguće preformulisati u računarski algoritam. Međutim, da bi programski jezici mogli obuhvatiti njegova mnogobrojna odstupanja od gramatičkih pravila, ovakvi i slični projekti najčešće zahtevaju kolektivni napor velikog broja govornika određenog jezika, kroz konstantan rad na stvaranju, proveri i dopuni različitih leksičkih korpusa (tj. baza podataka) neophodnih za sintezu njegovog bogatstva i analizu njegovih osobenosti. Sa osnovnom leksikološkom pretpostavkom na umu da "više ljudi više zna" pokušali smo ovom projektu pridodati i izvesnu interaktivnu dimenziju kroz mogućnost ispravljanja netačnih i nepreciznih podela reči. Stoga se nadamo da će ova veb-aplikacija ostvariti svoju obrazovnu funkciju služeći pre svega na korist onima kojima je ovaj aspekat srpskog jezika nedovoljno poznat, ali i podstičući u ovoj oblasti obaveštene pojedince i stručnjake da svojim angažovanjem doprinesu njenom usavršavanju.</p>       
+        </div>
+
+        <br>
+        <footer>
+            <div class="fcontainer">
+                <p id="contact">Kontaktirajte s nama: <a href="mailto:contact@podelinaslogove.com" target="_blank">contact@podelinaslogove.com</a></p>
+                <p id="bug">Prijavite bag: <a href="mailto:bugs@podelinaslogove.com" target="_blank">bugs@podelinaslogove.com</a></p>
+                <p id="copy">Copyright &copy; 2019 Igor Javor | All Rights Reserved.</p>
+            </div>
+
+        </footer>
+    </body>
+</html>

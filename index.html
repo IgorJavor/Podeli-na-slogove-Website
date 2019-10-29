@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="sr">
+    <head>
+        <title>Podela reči na slogove</title>
+        <meta charset="UTF-8"/>
+        <meta name="description" content="Aplikacija omogućava jednostavnu podelu pojedinačnih reči ili teksta na srpskom jeziku na slogove">
+        <meta name="keywords" content="slog, sloga, slogu, slogom, slogovi, slogova, slogovima, podela na slog, podela na slogove, granica sloga, stih, metar, versifikacija, silabička versifikacija, gramatika, fonetika, fonologija, podela reči na slogove, reči, tekst">
+        <meta name="author" content="Igor Javor">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link href="index.css" type="text/css" rel="stylesheet">
+        <script src="../slogovi.js" defer></script>
+        <link rel="canonical" href="http://www.podelinaslogove.com/index.html" />
+
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-150096484-1"></script>
+        <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'UA-150096484-1');
+        </script>
+
+    </head>
+
+    <body>
+        <nav id="navigation">
+            <ul id="navlist">
+                <a href="indexcyr.html"><li id= "cyr">Ћир</li></a>
+                <a href="index.html"><li id="lat">Lat</li></a>
+                <a id="home" href="index.html"> <li style="font-size: 1.5em; background-color: rgba(87, 3, 3, 0.85); color: rgba(214, 151, 97, 1);">Početna</li> </a>
+                <a id="rules" href="rules.html"><li>Pravila podele</li></a>
+                <a id="report" href="prijavi.html"><li>Prijavi pogrešnu podelu</li></a>
+                <a id="about" href="about.html"><li>O projektu</li></a>
+            </ul>
+        </nav>
+        <div class="heading">
+            <h1 id="naslov" class="title" onmouseover="naslov();" onmouseout="defNaslov();" onblur="defNaslov();" onfocus="naslov();">PODELI TEKST NA SLOGOVE</h1>
+            <p class="description">Pomoću ovog alata možete podeliti jednu ili više reči na slogove, po <a id="rulesA" href="rules.html">pravilima o granici sloga i podeli reči na slogove</a> gramatike srpskog jezika. </p>
+            <div class=input>
+                <textarea id="newInput" title="Unesite tekst" autofocus placeholder="Unesite tekst" onclick="this.focus();this.select()" onkeypress="addSpace(event);"></textarea>
+                <br>
+                <input id="submit" type="button" value="Podeli na slogove" onclick="checkText();">
+            </div>
+                <div id="resultCon">
+                <div id="container">
+                    <div id="result"></div>
+                    <br>
+                </div>
+                <input id="reportBug" type ="button" value="Prijavite pogrešno podeljenu reč" onclick="window.open('prijavi.html')">
+            </div>
+
+        </div>
+        <br>
+        <footer>
+            <div class="fcontainer">
+                <p id="contact">Kontaktirajte s nama: <a href="mailto:contact@podelinaslogove.com" target="_blank">contact@podelinaslogove.com</a></p>
+                <p id="bug">Prijavite bag: <a href="mailto:bugs@podelinaslogove.com" target="_blank">bugs@podelinaslogove.com</a></p>
+                <p id="copy">Copyright &copy; 2019 Igor Javor | All Rights Reserved.</p>
+            </div>
+
+        </footer>
+    </body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="sr-Cyrl-CS">
+    <head>
+        <title>Пријава погрешно подељене речи на слогове</title>
+        <meta charset="UTF-8"/>
+        <meta name="description" content="Апликација омогућава једноставну поделу појединачних речи или текста на српском језику на слогове">
+        <meta name="keywords" content="слог, слога, слогу, слогом, слогови, слогова, слоговима, подела на слог, подела на слогове, граница слога, стих, метар, версификација, силабичка версификација, граматика, фонетика, фонологија, подела речи на слогове, речи, текст">
+        <meta name="author" content="Игор Јавор">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link href="index.css" type="text/css" rel="stylesheet">
+        <script src="../slogovi.js" defer></script>
+        <link rel="canonical" href="http://www.podelinaslogove.com/prijavicyr.html" />
+
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-150096484-1"></script>
+        <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'UA-150096484-1');
+        </script>
+
+    </head>
+
+    <body>
+        <nav id="navigation">
+            <ul id="navlistCyr">
+                <a href="prijavicyr.html"><li id= "cyr">Ћир</li></a>
+                <a href="prijavi.html"><li id="lat">Lat</li></a>
+                <a id="home" href="indexcyr.html"> <li>Почетна</li> </a>
+                <a id="rules" href="rulescyr.html"><li>Правила поделе</li></a>
+                <a id="report" href="prijavicyr.html"><li style="font-size: 1.35em; background-color: rgba(87, 3, 3, 0.85); color: rgba(214, 151, 97, 1);">Пријави погрешну поделу</li></a>
+                <a id="about" href="aboutcyr.html"><li>О пројекту</li></a>
+            </ul>
+        </nav>
+        <div class="heading">
+            <h1 id="naslov" class="title">ПРИЈАВИТЕ ПОГРЕШНО ПОДЕЉЕНУ РЕЧ</h1>
+            <p class="description">Овде можете пријавити сваку погрешно подељену реч. После уноса речи, кликом на дугме бићете аутоматски преусмерени на форму за слање поруке серверу.</p>
+            <div class=input>
+                <textarea id="inputWrong" title="Погрешно подељена реч" autofocus placeholder="Унесите реч која је погрешно подељена" onclick="this.focus();this.select()" onkeypress="addSpace(event);"></textarea>
+                <br>
+                <textarea id="inputRight" title="Исправно подељена реч" autofocus placeholder="Унесите исправну поделу речи одвајајући слогове" onclick="this.focus();this.select()" onkeypress="addSpace(event);"></textarea>
+                <br>
+                <a id="report1" href="#" onclick="sendEmail();" target="_blank"> <input id="reportWord" type="button" value="Пријави погрешно подељену реч"> </a>
+                <br>
+                <div id="thankYouMsg">Хвала Вам што учествујете у побољшању функционалности веб-сајта!</div>
+            </div>
+
+        </div>
+        <br>
+        <footer>
+            <div class="fcontainer">
+                <p id="contact">Контактирајте с нама: <a href="mailto:contact@podelinaslogove.com" target="_blank">contact@podelinaslogove.com</a></p>
+                <p id="bug">Пријавите баг: <a href="mailto:bugs@podelinaslogove.com" target="_blank">bugs@podelinaslogove.com</a></p>
+                <p id="copy">Copyright &copy; 2019 Игор Јавор | Сва права задржана.</p>
+            </div>
+
+        </footer>
+    </body>
+</html>
