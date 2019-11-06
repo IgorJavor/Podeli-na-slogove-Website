@@ -1,0 +1,3 @@
+Sitemap: http://podelinaslogove.com/sitemap.xml
+User-agent: *
+Disallow:
